@@ -1,0 +1,12 @@
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/security/UsuarioDetailService.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/security/SecurityConstants.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/usuario/Usuario.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/usuario/UsuarioRepository.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/security/JWTAuthorizationFilter.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/usuario/UsuarioService.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/usuario/UsuarioDto.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/security/Permissao.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/security/SecurityConfig.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/EduApplication.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/usuario/UsuarioController.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/edu/security/JWTAuthenticationFilter.java
