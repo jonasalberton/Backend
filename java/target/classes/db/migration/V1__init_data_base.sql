@@ -1,18 +1,33 @@
-create table permissao
+CREATE TABLE tabela_frete
 (
-    permissao varchar(200)
+    id                 INT NOT NULL PRIMARY KEY,
+    descricao_curta    varchar(500),
+    km_percorrido      numeric,
+    taxa_administracao numeric
 );
 
-insert into permissao values ('ROLE_ADMIN');
+CREATE SEQUENCE seq_tabela_frete START 1;
 
-create table usuario
+CREATE TABLE custo_entrega
 (
-    username varchar(200),
-    password varchar(800),
-    nome     varchar(500)
+    id                  INT NOT NULL PRIMARY KEY,
+    cep_origem_entrega  varchar(1000),
+    cep_destino_entrega varchar(1000),
+    id_tabela_frete     int,
+    FOREIGN KEY (id_tabela_frete) REFERENCES tabela_frete (id) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
+CREATE SEQUENCE seq_custo_entrega START 1;
 
+CREATE TABLE entrega
+(
+    id                  INT NOT NULL PRIMARY KEY,
+    descricao_carga     varchar(1000),
+    cep_origem_entrega  varchar(1000),
+    cep_destino_entrega varchar(1000),
+    id_entregador       int,
+    id_tabela_frete    int,
+    FOREIGN KEY (id_tabela_frete) REFERENCES tabela_frete (id) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
 
-insert into usuario (username, nome, password)
-values ('mat', 'Matheus Matias', '$2a$10$zkdGczSkcIqK7DEZs.tJOeikiP4wDY3m7D/V.3xNtlpiV0ex7pfM6');
+CREATE SEQUENCE seq_entrega START 1;
