@@ -14,9 +14,9 @@ CREATE UNIQUE INDEX idx_descricao_curta
 CREATE TABLE custo_entrega
 (
     id                  INT NOT NULL PRIMARY KEY,
-    cep_origem_entrega  varchar(1000),
-    cep_destino_entrega varchar(1000),
-    id_tabela_frete     int,
+    cep_origem_entrega  varchar(1000) NOT NULL,
+    cep_destino_entrega varchar(1000) NOT NULL,
+    id_tabela_frete     int NOT NULL,
     FOREIGN KEY (id_tabela_frete) REFERENCES tabela_frete (id) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
