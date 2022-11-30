@@ -3,8 +3,8 @@ const httpProxy = require("express-http-proxy");
 const app = express();
 const port = 3000;
 
-const NODE_API = "http://localhost:3332";
-const JAVA_API = "http://localhost:3002";
+const NODE_API = "http://localhost:3336";
+const JAVA_API = "http://localhost:3336";
 
 const nodeProxy = httpProxy(NODE_API);
 const javaProxy = httpProxy(JAVA_API);

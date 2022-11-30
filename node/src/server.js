@@ -9,7 +9,7 @@ const server = express();
 
 server.use(express.json());
 server.use("/user", userRouter);
-server.use("/custo", freightRouter);
+server.use("/custos", freightRouter);
 
 async function main() {
   // connect to db
