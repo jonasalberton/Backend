@@ -3,6 +3,7 @@ package com.main.tabelaFrete;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Data

@@ -1,12 +1,15 @@
 CREATE TABLE tabela_frete
 (
     id                 INT NOT NULL PRIMARY KEY,
-    descricao_curta    varchar(500),
-    km_percorrido      numeric,
-    taxa_administracao numeric
+    descricao_curta    varchar(500) NOT NULL,
+    km_percorrido      numeric NOT NULL,
+    taxa_administracao numeric NOT NULL
 );
 
 CREATE SEQUENCE seq_tabela_frete START 1;
+
+CREATE UNIQUE INDEX idx_descricao_curta
+    ON tabela_frete(descricao_curta);
 
 CREATE TABLE custo_entrega
 (
