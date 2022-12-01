@@ -1,10 +1,13 @@
+/home/matheus/faculdade/Backend/java/src/main/java/com/main/tabelaFrete/TabelaFreteService.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/main/custoEntrega/CustoEntrega.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/main/entrega/EntregaRepository.java
 /home/matheus/faculdade/Backend/java/src/main/java/com/main/custoEntrega/CustoEntregaController.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/main/tabelaFrete/TabelaFreteException.java
 /home/matheus/faculdade/Backend/java/src/main/java/com/main/tabelaFrete/TabelaFreteRepository.java
 /home/matheus/faculdade/Backend/java/src/main/java/com/main/tabelaFrete/TabelaFrete.java
 /home/matheus/faculdade/Backend/java/src/main/java/com/main/MainApplication.java
 /home/matheus/faculdade/Backend/java/src/main/java/com/main/tabelaFrete/TabelaFreteController.java
+/home/matheus/faculdade/Backend/java/src/main/java/com/main/tabelaFrete/TabelaFreteServiceImpl.java
 /home/matheus/faculdade/Backend/java/src/main/java/com/main/custoEntrega/CustoEntregaRepository.java
 /home/matheus/faculdade/Backend/java/src/main/java/com/main/entrega/EntregaController.java
 /home/matheus/faculdade/Backend/java/src/main/java/com/main/entrega/Entrega.java
-/home/matheus/faculdade/Backend/java/src/main/java/com/main/custoEntrega/CustoEntrega.java
-/home/matheus/faculdade/Backend/java/src/main/java/com/main/entrega/EntregaRepository.java

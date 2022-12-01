@@ -9,7 +9,7 @@ import java.util.Optional;
 @Service
 public class TabelaFreteServiceImpl implements TabelaFreteService {
 
-    public static final String TABELA_FRETE_NÃO_ENCONTRADA = "Tabela de Frete não encontrada com id: ";
+    public static final String TABELA_FRETE_NAO_ENCONTRADA = "Tabela de Frete não encontrada com id: ";
     @Autowired
     private TabelaFreteRepository tabelaFreteRepository;
     @Override
@@ -29,7 +29,7 @@ public class TabelaFreteServiceImpl implements TabelaFreteService {
         }
 
         if (!tabelaFreteRepository.findById(id).isPresent()){
-            throw new TabelaFreteException(TABELA_FRETE_NÃO_ENCONTRADA + id);
+            throw new TabelaFreteException(TABELA_FRETE_NAO_ENCONTRADA + id);
         }
 
         return tabelaFreteRepository.findById(id).get();
@@ -39,7 +39,7 @@ public class TabelaFreteServiceImpl implements TabelaFreteService {
     public void deletar(Integer id) {
         Optional<TabelaFrete> tabelaFrete = tabelaFreteRepository.findById(id);
         if (!tabelaFrete.isPresent()){
-            throw new TabelaFreteException(TABELA_FRETE_NÃO_ENCONTRADA + id);
+            throw new TabelaFreteException(TABELA_FRETE_NAO_ENCONTRADA + id);
         }
         tabelaFreteRepository.delete(tabelaFrete.get());
     }

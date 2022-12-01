@@ -25,6 +25,10 @@ public class Entrega implements Serializable {
     @Column(name = "cep_destino_entrega")
     private String cepDestinoEntrega;
 
+    @Column(name = "status")
+    @Enumerated(EnumType.STRING)
+    private StatusEnum status;
+
     @Column(name = "id_entregador")
     private Integer idEntregador;
 
