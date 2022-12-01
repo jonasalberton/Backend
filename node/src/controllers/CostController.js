@@ -34,7 +34,7 @@ const calcFreightCost = async (req, res, next) => {
     try {
       const res = await client.query(text, values)
       tabela_frete = res.rows[0]
-      console.log(res.rows[0])
+      if (res.rows.length === 0 ) throw 'Tabela nao encontrada'
     } catch (err) {
       throw err
     }
@@ -98,7 +98,7 @@ const getEntregaById = async (req, res, next) => {
       const values = [id]
 
       const res = await client.query(text, values)
-      if (res.rows.length === 0 ) throw 'Entregador nao encontrada'
+      if (res.rows.length === 0 ) throw 'Entrega nao encontrada'
       entrega = res.rows[0]
     } catch (err) {
       throw err
@@ -199,7 +199,7 @@ const getEntregaByEntregadorId = async (req, res, next) => {
       const values = [id]
 
       const res = await client.query(text, values)
-      if (res.rows.length === 0 ) throw 'Nenhum entregador foi encontrado para esse entregador'
+      if (res.rows.length === 0 ) throw 'Nenhuma entrega foi encontrada para esse entregador'
       entregas = res.rows
     } catch (err) {
       throw err

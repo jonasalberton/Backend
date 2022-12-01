@@ -4,8 +4,8 @@ const axios = require("axios")
 const app = express();
 const port = 3000;
 
-const NODE_API = "http://localhost:3336";
-const JAVA_API = "http://localhost:8080";
+const NODE_API = "http://192.168.16.110:3336";
+const JAVA_API = "http://192.168.16.110:8080";
 
 const nodeProxy = httpProxy(NODE_API);
 const javaProxy = httpProxy(JAVA_API);
@@ -40,4 +40,4 @@ app.get("/entregas/entregador/:id", (req, res, next) =>
   nodeProxy(req, res, next)
 );
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, '0.0.0.0', () => console.log(`Example app listening on port ${port}!`));

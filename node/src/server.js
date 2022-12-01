@@ -9,7 +9,7 @@ server.use(express.json());
 server.use("/entregas", entregaRouter);
 
 async function main() {
-  server.listen(PORT, () => console.log("Server running at: ", PORT));
+  server.listen(PORT, '0.0.0.0', () => console.log("Server running at: ", PORT));
 }
 
 main().catch((err) => console.log(err));
