@@ -4,6 +4,9 @@ com/main/custoEntrega/CustoEntregaController.class
 com/main/custoEntrega/CustoEntregaRepository.class
 com/main/tabelaFrete/TabelaFreteService.class
 com/main/custoEntrega/CustoEntrega.class
+com/main/entrega/EntregaException.class
+com/main/entrega/StatusEnum.class
+com/main/entrega/EntregaServiceImpl.class
 com/main/entrega/EntregaController.class
 com/main/entrega/Entrega.class
 com/main/MainApplication.class
@@ -11,3 +14,4 @@ com/main/tabelaFrete/TabelaFreteRepository.class
 com/main/entrega/EntregaRepository.class
 com/main/tabelaFrete/TabelaFreteController.class
 com/main/tabelaFrete/TabelaFreteException.class
+com/main/entrega/EntregaService.class
