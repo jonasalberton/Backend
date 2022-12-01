@@ -98,7 +98,7 @@ const getEntregaById = async (req, res, next) => {
       const values = [id]
 
       const res = await client.query(text, values)
-      if (res.rows.length === 0 ) throw 'Entrega nao encontrada'
+      if (res.rows.length === 0 ) throw 'Entregador nao encontrada'
       entrega = res.rows[0]
     } catch (err) {
       throw err
@@ -165,7 +165,9 @@ const getEntregaById = async (req, res, next) => {
       valorKm: valorKm,
       taxa: taxa,
       valor: valorFrete,
-      status: entrega.status
+      status: entrega.status,
+      descricao: entrega.descricao_carga,
+      id: entrega.id
     }
 
 
@@ -197,7 +199,7 @@ const getEntregaByEntregadorId = async (req, res, next) => {
       const values = [id]
 
       const res = await client.query(text, values)
-      if (res.rows.length === 0 ) throw 'Nenhuma entrag foi encontrada para esse entregador'
+      if (res.rows.length === 0 ) throw 'Nenhum entregador foi encontrado para esse entregador'
       entregas = res.rows
     } catch (err) {
       throw err
@@ -268,7 +270,9 @@ const getEntregaByEntregadorId = async (req, res, next) => {
         valorKm: valorKm,
         taxa: taxa,
         valor: valorFrete,
-        status: entrega.status
+        status: entrega.status,
+        descricao: entrega.descricao_carga,
+        id: entrega.id
       }
 
       entregaReponse.push(response)
