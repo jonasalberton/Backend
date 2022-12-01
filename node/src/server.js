@@ -1,18 +1,14 @@
-const { userRouter } = require("./routes/user-router");
-const { freightRouter  } = require("./routes/freight-router");
+const { entregaRouter  } = require("./routes/entrega-router");
 const express = require("express");
-
-const PORT = 3336;
-const DB = 'mongodb://root:example@192.168.16.100:27017/?authMechanism=DEFAULT';
-
 const server = express();
+require('./db/client')
+
+const PORT = 3336
 
 server.use(express.json());
-server.use("/user", userRouter);
-server.use("/custos", freightRouter);
+server.use("/entregas", entregaRouter);
 
 async function main() {
-  // connect to db
   server.listen(PORT, () => console.log("Server running at: ", PORT));
 }
 

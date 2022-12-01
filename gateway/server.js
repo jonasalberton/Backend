@@ -25,14 +25,13 @@ app.delete("/tabelas/:id", (req, res, next) => nodeProxy(req, res, next));
 app.get("/tabelas/:id", (req, res, next) => nodeProxy(req, res, next));
 app.get("/tabelas", (req, res, next) => nodeProxy(req, res, next));
 
-// Fretes
-app.get("/custos/frete", (req, res, next) => nodeProxy(req, res, next));
 
 // Entregas
-app.get("/entregas/:id", (req, res, next) => javaProxy(req, res, next));
-app.post("/entregas", (req, res, next) => javaProxy(req, res, next));
+app.get("/entregas/custos/frete", (req, res, next) => nodeProxy(req, res, next));
+app.get("/entregas/:id", (req, res, next) => nodeProxy(req, res, next));
+app.post("/entregas", (req, res, next) => nodeProxy(req, res, next));
 app.get("/entregas/entregador/:id", (req, res, next) =>
-  javaProxy(req, res, next)
+  nodeProxy(req, res, next)
 );
 app.patch("/entregas/:id", (req, res, next) => javaProxy(req, res, next));
 
