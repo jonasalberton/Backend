@@ -274,7 +274,7 @@ const getEntregaByEntregadorId = async (req, res, next) => {
       entregaReponse.push(response)
     }
 
-    return res.status(200).json(entregaReponse)
+    return res.status(200).json({ entregas: entregaReponse})
   } catch (error) {
     return res.status(500).json({ error: error });
   }
